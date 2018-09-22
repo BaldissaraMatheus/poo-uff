@@ -32,7 +32,7 @@ public class aula4Ex2 {
 
 	public static void countNumbers(String inputStr) {
 		int count = inputStr.length() - inputStr.replaceAll("0", "").replaceAll("1", "").replaceAll("2", "").replaceAll("3", "").replaceAll("4", "").replaceAll("5", "").replaceAll("6", "").replaceAll("7", "").replaceAll("8", "").replaceAll("9", "").length();
-		System.out.println("Número de vogais: " + count);
+		System.out.println("Número de dígitos numéricos: " + count);
 	}
 
 	public static void verPalindron(String inputStr) {
@@ -75,7 +75,7 @@ public class aula4Ex2 {
 		verRio(stringOutput);
 
 		// Imprime número de dígitos numéricos
-		countVowels(stringOutput);
+		countNumbers(stringOutput);
 
 		// Verifica se é palíndrono
 		verPalindron(stringOutput);
