@@ -2,31 +2,48 @@ import java.lang.Math;
 
 public class aula4Ex1 {
 
-  public static void listaDivisores(int num) {
-    int limite = (int)Math.sqrt(num);
-    int primo = 0;
+  public static void listaDivisoresSimples(int num) {
+    boolean primo = true;
 
-    for (int i=1; i<=limite; i++) {
+    for (int i=2; i<num; i++) {
       if (num%i == 0) {
         System.out.println(i);
-        primo += 1;
+        primo = false;
+  
+      }
+    }
+
+    if (primo == true) {
+      System.out.println("O número é primo");
+    }
+  }
+
+  public static void listaDivisoresEficiente(int num) {
+    int limite = (int)Math.sqrt(num);
+    boolean primo = true;
+
+    for (int i=2; i<=limite; i++) {
+      if (num%i == 0) {
+        System.out.println(i);
+        primo = false;
 
         if (i != num/i) {
           System.out.println(num/i);
-          primo += 1;
         }
   
       }
     }
 
-    if (primo <= 2) {
+    if (primo == true) {
       System.out.println("O número é primo");
     }
   }
 
-
   public static void main(String[] args) {
-    // listaDivisores(31);
+    int num = 12;
+
+    // listaDivisoresEficiente(num);
+    // listaDivisoresSimples(num);
   }
 }
 
