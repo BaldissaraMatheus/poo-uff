@@ -59,11 +59,13 @@ public class aula4Ex2 {
 	public static void main(String[] args) {
 
 		System.out.print("Digite uma palavra legal: ");
-		Scanner scannerInput = new Scanner(System.in);		
-		String stringInput = scannerInput.nextLine();
+		Scanner sc = new Scanner(System.in);		
+		String stringInput = sc.nextLine();
 
 		// Imprime maiúsculo
 		String stringOutput = printUppercase(stringInput);
+
+		sc.close();
 
 		// Imprime número de vogais
 		countVowels(stringOutput);
