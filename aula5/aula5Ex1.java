@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class aula5Ex1 {
+
   public static void listaPessoas(int len) {
     String nomes[] = new String[len];
     int idades[] = new int[len];
@@ -9,9 +10,9 @@ public class aula5Ex1 {
     Scanner scInt = new Scanner(System.in);
     
     for (int i=0; i<len; i++) {
-      System.out.println("Digite o nome " + i);
+      System.out.println("Digite o nome " + (i+1));
       nomes[i] = scStr.nextLine();
-      System.out.println("Digite a idade " + i);
+      System.out.println("Digite a idade " + (i+1));
       idades[i] = scInt.nextInt();
     }
 
@@ -38,6 +39,8 @@ public class aula5Ex1 {
   }
 
   public static void main(String[] args) {
-    listaPessoas(5);
+    int tamanho = 20;
+
+    listaPessoas(tamanho);
   }
 }
