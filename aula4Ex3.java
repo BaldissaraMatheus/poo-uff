@@ -1,11 +1,9 @@
-import java.util.Scanner;
-
 public class aula4Ex3 {
 
   public static void imprimeIniciais(String nome) {   
     String iniciais = "";
 
-    /* Conectores escrito com regular expressions para selecionar apenas
+    /* Conectores escritos com regular expressions para selecionar apenas
      os termos indicados, caso o contrário, nomes com 'DANIEL' sofreriam
      modificações não desejáveis */
 
