@@ -44,5 +44,4 @@ public class aula4Ex3 {
     String nome = "Fausto Corrêa da Silva";
     imprimeIniciais(nome);
   }
-
 }
