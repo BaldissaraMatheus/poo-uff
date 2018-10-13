@@ -11,6 +11,6 @@ public class aula7Ex2 {
     agenda.adicionaPessoa(p1);
     agenda.adicionaPessoa(p2);
     agenda.adicionaPessoa(p3);
-    agenda.imprimeNomes();
+    agenda.imprimePessoas();
   }
 }

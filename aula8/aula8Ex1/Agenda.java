@@ -1,4 +1,4 @@
-package aula7ex2package;
+package aula8ex1package;
 
 public class Agenda {
   private Pessoa pessoas[];
@@ -14,20 +14,19 @@ public class Agenda {
     if (topo < TMAX) {
       this.pessoas[this.topo] = pessoa;
       topo+=1;
-      this.ordenaAgenda();
     }
   }
 
-  public void ordenaAgenda() {
-    for (int i=0; i<topo; i++) {
-      for (int j=i+1; j<topo; j++) {
-        if ((this.pessoas[i].getNome()).compareTo(this.pessoas[j].getNome())>0) {
-          Pessoa temp = this.pessoas[i];
-          this.pessoas[i] =  this.pessoas[j];
-          this.pessoas[j] = temp;
-        }
-      }
-    }
+  public Pessoa[] getPessoas() {
+    return this.pessoas;
+  }
+
+  public int getLen() {
+    return topo;
+  }
+
+  public void setPessoas(Pessoa pessoas[]) {
+    this.pessoas = pessoas;
   }
 
   public void imprimePessoas() {
