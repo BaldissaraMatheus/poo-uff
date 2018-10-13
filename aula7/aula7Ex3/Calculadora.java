@@ -10,24 +10,28 @@ public class Calculadora {
   public int soma(int num) {
     this.memoria = this.memoria + num;
     System.out.println("Memória = " + this.memoria);
+    
     return this.memoria;
   }
 
   public int subtrai(int num) {
     this.memoria = this.memoria - num;
     System.out.println("Memória = " + this.memoria);
+
     return this.memoria;
   }
 
   public int multiplica(int num) {
     this.memoria = this.memoria * num;
     System.out.println("Memória = " + this.memoria);
+
     return this.memoria;
   }
 
   public int divide(int num) {
-    this.memoria = this.memoria/num;
+    this.memoria = this.memoria / num;
     System.out.println("Memória = " + this.memoria);
+
     return this.memoria;
   }
 
