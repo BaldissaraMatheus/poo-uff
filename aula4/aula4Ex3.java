@@ -39,7 +39,7 @@ public class aula4Ex3 {
   }
 
   public static void main(String[] args) {
-    String nome = "Fausto Corrêa da Silva";
+    String nome = "Toninho Rodrigues";
     imprimeIniciais(nome);
   }
 }
