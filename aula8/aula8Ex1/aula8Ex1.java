@@ -3,7 +3,7 @@ package aula8ex1package;
 public class aula8Ex1 {
   public static void main(String[] args) {
     Pessoa p1 = new Pessoa("Orora", 22);
-    Pessoa p2 = new Pessoa("Fausto", 68);
+    Pessoa p2 = new Pessoa("Faustao", 68);
     Pessoa p3 = new Pessoa("Laninha", 33);
 
     Agenda agenda = new Agenda();
