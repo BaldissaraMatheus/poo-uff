@@ -14,7 +14,7 @@ public class ContaCorrente {
 
   public int sacar(int valor) {
     this.saldo -= valor;
-    this.saldo *= 0.95;
+    this.saldo *= 0.995;
     return this.saldo;
   }
 
