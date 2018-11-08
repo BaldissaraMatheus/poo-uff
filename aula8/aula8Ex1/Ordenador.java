@@ -8,7 +8,7 @@ public abstract class Ordenador {
 
     for (int i=0; i<len; i++) {
       for (int j=i+1; j<len; j++) {
-        if (pessoas[i].getIdade() > pessoas[j].getIdade()) {
+        if ((pessoas[i].getNome()).compareTo(pessoas[j].getNome())>0) {
           Pessoa temp = pessoas[i];
           pessoas[i] =  pessoas[j];
           pessoas[j] = temp;
