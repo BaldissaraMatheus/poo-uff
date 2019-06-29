@@ -53,4 +53,4 @@ No programa principal, pergunte ao usuário quantas formas ele deseja criar. Em 
 
 2. Relogio(setHorario(horario); getHorario(); setHorarioAlarme(horario); getHorarioAlarme(); ligarAlarme(); desligarAlarme(); setVolumeRelogio(volume); getVolumeRelogio());
 
-Implemente uma classe RadioRelogio que implemente as duas interfaces. Para atender a implementação das interfaces, quais atributos essa classe necessita
+Implemente uma classe RadioRelogio que implemente as duas interfaces. Para atender a implementação das interfaces, quais atributos essa classe necessita.
