@@ -44,9 +44,9 @@ b. Modifique o código do programa anterior da seguinte forma:
 
 No programa principal, pergunte ao usuário quantas formas ele deseja criar. Em seguida, para cada forma, pergunte se deseja criar um quadrado, um retângulo ou um círculo, solicitando os dados necessários para criar a forma. Todas as formas criadas devem ser armazenadas em um vetor. Finalmente, imprima:
 
-a. Os dados (lados ou raio);
-b. Os perímetros; e
-c. As áreas de todas as formas.
+1. Os dados (lados ou raio);
+2. Os perímetros; e
+3. As áreas de todas as formas.
 
 ## 5. Implemente duas interfaces em Java, contendo as declarações de métodos apresentadas entre parênteses:
 a. Radio(seEmissora(emissora, tipoEmi); getEmissora(); getTipoEmissora(); setVolumeRadio(volume); getVolumeRadio())
