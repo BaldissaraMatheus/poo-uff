@@ -49,8 +49,8 @@ No programa principal, pergunte ao usuário quantas formas ele deseja criar. Em 
 3. As áreas de todas as formas.
 
 ## 5. Implemente duas interfaces em Java, contendo as declarações de métodos apresentadas entre parênteses:
-a. Radio(seEmissora(emissora, tipoEmi); getEmissora(); getTipoEmissora(); setVolumeRadio(volume); getVolumeRadio())
+1. Radio(seEmissora(emissora, tipoEmi); getEmissora(); getTipoEmissora(); setVolumeRadio(volume); getVolumeRadio())
 
-b. Relogio(setHorario(horario); getHorario(); setHorarioAlarme(horario); getHorarioAlarme(); ligarAlarme(); desligarAlarme(); setVolumeRelogio(volume); getVolumeRelogio());
+2. Relogio(setHorario(horario); getHorario(); setHorarioAlarme(horario); getHorarioAlarme(); ligarAlarme(); desligarAlarme(); setVolumeRelogio(volume); getVolumeRelogio());
 
 Implemente uma classe RadioRelogio que implemente as duas interfaces. Para atender a implementação das interfaces, quais atributos essa classe necessita
