@@ -1,19 +1,19 @@
-## Exercício de herança
-Em um sistema de loja, há 3 tipos de usuário: gerente, funcionário e cliente. Todo usuário tem nome e senha. O cliente possui, além do nome e senha, outros dados cadastrais. O funcionário possui métodos relacionados a venda de produtos. O gerente pode fazer tudo que o funcionário pode e também fechamento do caixa. Como é a hierarquia de herança desse sistema no que se refere a controle de usuários?
+# Exercícios
 
-## Refazer o exercício da Agenda, que lista os contados ordenados por nome e por idade
-* Fazer uma classe abstrata Ordenador com a lógica de ordenação, porém chamando um método abstrato compara (Pessoa, Pessoa);
+1. Refazer o exercício da Agenda, que lista os contados ordenados por nome e por idade:
 
-## Exercício
-* Criar duas classes extras, OrdenadorNome e OrdenadorIdade, que herdam de Ordenador e implementam o método abstrato compara(Pessoa, Pessoa);
+    * Fazer uma classe abstrata Ordenador com a lógica de ordenação, porém chamando um método abstrato compara (Pessoa, Pessoa);
 
-* Instanciar o ordenador apropriado para listar os contatos por nome e por idade.
+    * Criar duas classes extras, OrdenadorNome e OrdenadorIdade, que herdam de Ordenador e implementam o método abstrato compara(Pessoa, Pessoa);
 
-## Exercício
-* Faça uma classe Animal com o método abstrato "fala";
+    * Instanciar o ordenador apropriado para listar os contatos por nome e por idade.
 
-* Faça as classes Homem, Cão e Gato, herdando de animal, redefinindo o método "fala" para retornar "Oi", "Au au" e "Miau" respectivamente;
+2. Realize o que for pedido nos itens abaixo descritos abaixo:
+    
+    * Faça uma classe Animal com o método abstrato "fala";
 
-* Crie um vetor de 10 Animais e instancie Homens, Cães e Gatos nesse vetor;
+    * Faça as classes Homem, Cão e Gato, herdando de animal, redefinindo o método "fala" para retornar "Oi", "Au au" e "Miau" respectivamente;
 
-* Faça um loop por todos os Animais do vetor, pedindo para eles falarem.
+    * Crie um vetor de 10 Animais e instancie Homens, Cães e Gatos nesse vetor;
+
+    * Faça um loop por todos os Animais do vetor, pedindo para eles falarem.

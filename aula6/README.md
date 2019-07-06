@@ -1,8 +1,7 @@
-# Exercício
-* Faça uma calculadora que forneça as seguintes opções para o usuário, usando métodos sempre que possível;
-* A calculadora deve operar sempre sobre o valor corrente na memória;
+# Exercícios
 
-Como o seguinte exemplo:
+1. Faça uma calculadora que forneça as seguintes opções para o usuário, usando métodos sempre que possível:
+
 ```
 Estado da memória: 0
 Opções:
@@ -16,3 +15,5 @@ Opções:
 
 Qual opção você deseja?
 ```
+
+* A calculadora deve operar sempre sobre o valor corrente na memória;

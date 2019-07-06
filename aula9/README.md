@@ -1,4 +1,7 @@
-## Refazer exercício deacalculadora e colocar exceções para:
-1. Caso o usuário entre com valor não numérico;
+## Exercícios
 
-2. Caso o usuário entre com zero no caso da divisão.
+1. Refazer exercício de calculadora e colocar exceções para:
+    
+    * Caso o usuário entre com valor não numérico;
+
+    * Caso o usuário entre com zero no caso da divisão.
