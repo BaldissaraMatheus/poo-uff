@@ -41,8 +41,8 @@ public class aula4Ex5 {
   public static void main(String[] args) {
     String s1 = "Aurora";
     String s2 = "Aksnes";
-    String s3 = "Silvio";
-    String s4 = "Santos";
+    String s3 = "Billie";
+    String s4 = "Eilish";
 
     recombinacaoEmutacao(s1, s2, s3, s4);
   }
