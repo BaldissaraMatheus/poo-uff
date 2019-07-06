@@ -33,7 +33,11 @@
 
     Considerando que os indivíduos da população são codificados através de strings, o operador de recombinação recebe duas strings S1 e S2, sorteia aleatoriamente um ponto de corte em S1 e S2 e, em seguida, realiza a troca de informações genéticas de S1 e S2, gerando dois novos indivíduos filhos. A figura abaixo ilustra o processo de recombinação:
 
+    [Recombinação](../ilustracao-aula4-ex4.png)
+
 5. O operador de mutação consiste em sortear aleatoriamente uma posição em um dos indivíduos filhos e, então, modificar aleatoriamente o conteúdo daquela posição. A figura abaixo ilustra o processo de mutação:
+
+    [Ilustração](../ilustracao-aula4-ex5.png)
 
     Construa um programa em Java que implemente e utilize as funções de recombinação e mutação:
 
