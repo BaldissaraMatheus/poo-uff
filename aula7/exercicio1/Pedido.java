@@ -1,22 +1,26 @@
 package aula7.exercicio1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pedido {
-  private Item itens[];
-  private int topo;
-  private int precoTotal;
+  private List<Item> itens;
 
   public Pedido() {
-    topo = 0;
-    this.itens = new Item[100];
-    this.precoTotal = 0;      
+    this.itens = new ArrayList<>();     
   }
 
   public void adicionaItem(Item item) {
-    this.itens[topo] = item;
-    this.precoTotal = this.precoTotal + item.getPreco();
+    this.itens.add(item);
   }
 
   public int getPreco() {
-    return this.precoTotal;
+    int precoTotal = 0;
+    
+    for (Item item : itens) {
+		precoTotal += item.getPreco();
+	}
+    
+    return precoTotal;
   }
 }
