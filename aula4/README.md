@@ -6,6 +6,7 @@
     * O número de caracteres da string;
 
     * A string com todas suas letras em maiúsculo;
+    
     * O número de vogais da string;
 
     * Se a string digitada começa com "UNI" (ignorando maúsculas/minúsculas);

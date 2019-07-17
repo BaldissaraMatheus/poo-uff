@@ -1,5 +1,4 @@
 package aula4;
-import java.util.Scanner;
 
 public class exercicio4 {
 
@@ -15,8 +14,8 @@ public class exercicio4 {
   }
 
   public static void main(String[] args) {
-    String s1 = "Fausto";
-    String s2 = "Silva";
+    String s1 = "Toninho";
+    String s2 = "Rodrigues";
 
     algoritmoGenetico(s1, s2);
   }

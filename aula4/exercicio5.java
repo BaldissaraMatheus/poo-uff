@@ -1,5 +1,4 @@
 package aula4;
-import java.util.Scanner;
 
 public class exercicio5 {
 
@@ -14,29 +13,29 @@ public class exercicio5 {
     String filho1 = s1.substring(0, pontoCorte) + s2.substring(pontoCorte, s2.length());
     String filho2 = s2.substring(0, pontoCorte) + s1.substring(pontoCorte, s1.length());
 
-    return new String[] {filho1, filho2};
+    return new String[] { filho1, filho2 };
   }
 
-  private static String mutacao(String str) {  
-    String strMutada = str;
+  private static String mutacao(String input) {  
+    String output = input;
     String alfabeto = "abcdefghijklmnopqrstuvwxyz";
-    char randomChar = alfabeto.charAt((int)(Math.random() * alfabeto.length()));
-    int posicao = (int)(Math.random() * str.length());
+    char caractereAleatorio = alfabeto.charAt((int)(Math.random() * alfabeto.length()));
+    int posicao = (int)(Math.random() * input.length());
 
-    strMutada = str.substring(0, posicao) + randomChar  + str.substring(posicao+1, str.length()); 
+    output = input.substring(0, posicao) + caractereAleatorio  + input.substring(posicao+1, input.length()); 
 
-    return(strMutada);
+    return(output);
   }
 
 
   public static void recombinacaoEmutacao(String s1, String s2, String s3, String s4) {
-    String[] rec1 = recombinacao(s1, s2);
-    String[] rec2 = recombinacao(s3, s4);
+    String[] recombinacao1 = recombinacao(s1, s2);
+    String[] recombinacao2 = recombinacao(s3, s4);
 
-    System.out.println(mutacao(rec1[0]));
-    System.out.println(mutacao(rec1[1]));
-    System.out.println(mutacao(rec2[0]));
-    System.out.println(mutacao(rec2[1]));
+    System.out.println(mutacao(recombinacao1[0]));
+    System.out.println(mutacao(recombinacao1[1]));
+    System.out.println(mutacao(recombinacao2[0]));
+    System.out.println(mutacao(recombinacao2[1]));
   }
 
   public static void main(String[] args) {

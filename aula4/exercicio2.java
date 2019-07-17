@@ -1,86 +1,114 @@
 package aula4;
+import java.util.Arrays;
 import java.util.Scanner;
-import java.lang.*;
 
 public class exercicio2 {
 	
-	public static String printUppercase(String input) {
+	public static void contaCaracteres(String input) {
+		System.out.println("A palavra digitada tem " + input.length() + " caracteres");
+	}
+	
+	public static String escreveEmMaiusculo(String input) {
 		String uppercase = input.toUpperCase();
 		System.out.println("Em maiúsculo: " + uppercase);
 		return uppercase;
 	}
 
-	public static void verUni(String inputStr) {
-		if ((inputStr.substring(0, 3)).equals("UNI")){
+	public static void verificaSeComecaComUni(String input) {
+		if ((input.substring(0, 3)).equals("UNI")){
 			System.out.println("A string começa com UNI!!!");
 		} else {
 			System.out.println("A string NÃO começa com UNI!!!");
 		}
 	}
 
-	public static void verRio(String inputStr) {
-		if ((inputStr.substring((inputStr.length()-3), inputStr.length())).equals("RIO")){
+	public static void verificaSeTerminaComRio(String input) {
+		if ((input.substring((input.length()-3), input.length())).equals("RIO")) {
 			System.out.println("A string termina com RIO!!!");
 		} else {
 			System.out.println("A string NÃO começa com RIO!!!");
 		}		
 	}
 
-	public static void countVowels(String inputStr) {
-		int count = inputStr.length() - inputStr.replaceAll("A", "").replaceAll("E", "").replaceAll("I", "").replaceAll("O", "").replaceAll("U", "").length();
-		System.out.println("Número de vogais: " + count);
+	public static void contaVogais(String input) {
+		int numeroDeVogais = input.length() - input.replaceAll("A", "")
+				.replaceAll("E", "").replaceAll("I", "")
+				.replaceAll("O", "").replaceAll("U", "")
+				.length();
+		System.out.println("Número de vogais: " + numeroDeVogais);
 	}
 
-	public static void countNumbers(String inputStr) {
-		int count = inputStr.length() - inputStr.replaceAll("0", "").replaceAll("1", "").replaceAll("2", "").replaceAll("3", "").replaceAll("4", "").replaceAll("5", "").replaceAll("6", "").replaceAll("7", "").replaceAll("8", "").replaceAll("9", "").length();
-		System.out.println("Número de dígitos numéricos: " + count);
+	public static void contaNumeros(String input) {
+		int numerosContados = input.length() - input.replaceAll("0", "").replaceAll("1", "")
+				.replaceAll("2", "").replaceAll("3", "").replaceAll("4", "")
+				.replaceAll("5", "").replaceAll("6", "").replaceAll("7", "")
+				.replaceAll("8", "").replaceAll("9", "")
+				.length();
+		System.out.println("Número de dígitos numéricos: " + numerosContados);
 	}
 
-	public static void verPalindron(String inputStr) {
-		int beg = 0;
-		int end = inputStr.length()-1;
-
-		while (beg < end) {
-			String begStr = inputStr.substring(beg, beg+1);
-			String endStr = inputStr.substring(end, end+1);
-
-			if(begStr.equals(endStr)) {
-				beg+=1;
-				end-=1;
-
-			} else {
-				System.out.println("Não é palíndrono!!!");
-				return;
+	public static void contaVogaisFormaAlternativa(String input) {
+		String palavraSemVogais = input;
+		String vogais[] = new String[] { "A", "E", "I", "O", "U" };
+		
+		for (String vogal : Arrays.asList(vogais)) {
+			palavraSemVogais = palavraSemVogais.replaceAll(vogal, "");
+		}
+		
+		System.out.println("Número de vogais: " + (input.length() - palavraSemVogais.length()));
+	}
+	
+	public static void contaNumerosFormaAlternativa(String input) {
+		String palavraSemNumeros = input;
+		Integer numeros[] = new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		
+		for (Integer numero : Arrays.asList(numeros)) {
+			palavraSemNumeros = palavraSemNumeros.replaceAll(numero.toString(), "");
+		}
+		
+		System.out.println("Número de dígitos numéricos: " + (input.length() - palavraSemNumeros.length()));
+	}
+	
+	public static void verificaSeEhPalindrono(String input) {
+		boolean palindrono = true;
+		
+		for (int i = 0; i < input.length()- 1 - i; i++) {
+			if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+				palindrono = false;
+				break;
 			}
 		}
-
-		System.out.println("É palíndrono!!!");
+		
+		if (palindrono) {
+			System.out.println("É palíndrono!!!!!!");
+			
+		} else {
+			System.out.println("Não é palíndrono!!!!!!");
+		}
 	}
-
+	
+	
 	public static void main(String[] args) {
 
-		System.out.print("Digite uma palavra legal: ");
+		System.out.print("Digite uma palavra bacana: ");
 		Scanner sc = new Scanner(System.in);		
-		String stringInput = sc.nextLine();
-
-		// Imprime maiúsculo
-		String stringOutput = printUppercase(stringInput);
-
+		String palavra = sc.nextLine();
 		sc.close();
 
-		// Imprime número de vogais
-		countVowels(stringOutput);
+		contaCaracteres(palavra);
+		
+		palavra = escreveEmMaiusculo(palavra);
+		
+		contaVogais(palavra);
+//		contaVogaisFormaAlternativa(palavra);
 
-		// Verifica se começa com UNI
-		verUni(stringOutput);
+		verificaSeComecaComUni(palavra);
 
-		// Verifica se termina com RIO
-		verRio(stringOutput);
+		verificaSeTerminaComRio(palavra);
 
-		// Imprime número de dígitos numéricos
-		countNumbers(stringOutput);
+		contaNumeros(palavra);
+//		contaNumerosFormaAlternativa(palavra);
 
-		// Verifica se é palíndrono
-		verPalindron(stringOutput);
+		verificaSeEhPalindrono(palavra);
 	}	
 }

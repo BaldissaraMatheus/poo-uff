@@ -3,6 +3,7 @@ public class exercicio3 {
 
   public static void imprimeIniciais(String nome) {   
     String iniciais = "";
+    nome = nome.toUpperCase();
 
     /* Conectores escritos com regular expressions para selecionar apenas
      os termos indicados, caso o contrário, nomes como 'DANIEL' sofreriam
@@ -19,22 +20,20 @@ public class exercicio3 {
       "\\b DU\\b",
     };
 
-    nome = nome.toUpperCase();
-
-    for (int i=0; i<conectores.length; i++) {
+    for (int i = 0; i < conectores.length; i++) {
       nome = nome.replaceAll(conectores[i], "");
     }
 
-    int primeiraLetra = 0;
+    int posicaoPrimeiroCaracterePalavra = 0;
 
     for (int i = 0; i < nome.length() - 1 ; i++) {
       if (nome.charAt(i) == ' ') {
-        iniciais = iniciais + nome.charAt(primeiraLetra);
-        primeiraLetra = i + 1;   
+        iniciais = iniciais + nome.charAt(posicaoPrimeiroCaracterePalavra);
+        posicaoPrimeiroCaracterePalavra = i + 1;   
       }
     }
 
-    iniciais = iniciais + nome.charAt(primeiraLetra);
+    iniciais = iniciais + nome.charAt(posicaoPrimeiroCaracterePalavra);
 
     System.out.println(iniciais);
   }
