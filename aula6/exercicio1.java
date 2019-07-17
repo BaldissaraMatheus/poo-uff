@@ -3,44 +3,42 @@ import java.util.Scanner;
 
 public class exercicio1 {
 
+  private static Scanner scanner;
+
   public static int soma(int n1) {
-    int n2;
-    Scanner sc = new Scanner(System.in);
+    scanner = new Scanner(System.in);
 
     System.out.print(n1 + " + ");
-    n2 = sc.nextInt();
+    int n2 = scanner.nextInt();
 
-    return n1+n2;
+    return n1 + n2;
   }
 
   public static int subtrai(int n1) {
-    int n2;
-    Scanner sc = new Scanner(System.in);
+    scanner = new Scanner(System.in);
 
     System.out.print(n1 + " - ");
-    n2 = sc.nextInt();
+    int n2 = scanner.nextInt();
 
-    return n1-n2;
+    return n1 - n2;
   }
 
   public static int multiplica(int n1) {
-    int n2;
-    Scanner sc = new Scanner(System.in);
+    scanner = new Scanner(System.in);
 
     System.out.print(n1 + " * ");
-    n2 = sc.nextInt();
+    int n2 = scanner.nextInt();
 
-    return n1*n2;
+    return n1 * n2;
   }
 
   public static int divide(int n1) {
-    int n2;
-    Scanner sc = new Scanner(System.in);
+    scanner = new Scanner(System.in);
 
     System.out.print(n1 + "/");
-    n2 = sc.nextInt();
+    int n2 = scanner.nextInt();
 
-    return n1/n2;
+    return n1 / n2;
   }
 
   public static int limpaMemoria() {
@@ -48,10 +46,10 @@ public class exercicio1 {
   }
 
   public static boolean saiDoPrograma() {
-    Scanner sc = new Scanner(System.in);
+    scanner = new Scanner(System.in);
 
     System.out.println("Tem certeza de que deseja sair do programa?");
-    String decisao = sc.nextLine();
+    String decisao = scanner.nextLine();
 
     if (decisao.toUpperCase().equals("SIM") || decisao.toUpperCase().equals("S") ) {
       return false;
@@ -63,7 +61,7 @@ public class exercicio1 {
   }
 
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+    scanner = new Scanner(System.in);
     boolean continua = true;
     int memoria = 0;
     int operacao = 0;
@@ -71,7 +69,7 @@ public class exercicio1 {
     while (continua) {      
 
       System.out.println("Qual operação deseja realizar?");
-      operacao = sc.nextInt();      
+      operacao = scanner.nextInt();      
   
       switch(operacao) {
         case 1: 
@@ -109,7 +107,5 @@ public class exercicio1 {
       }      
 
     }
-
-    sc.close();
   }
 }
