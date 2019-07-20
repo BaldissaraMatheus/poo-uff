@@ -10,4 +10,3 @@ public interface Relogio {
 	  public void ligaAlarme();
 	  public void desligaAlarme();
 	}
-
