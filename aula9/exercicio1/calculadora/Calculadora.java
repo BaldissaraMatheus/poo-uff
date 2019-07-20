@@ -1,5 +1,6 @@
 package aula9.exercicio1.calculadora;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -9,62 +10,53 @@ public class Calculadora {
     this.memoria = 0;
   }
 
-  private String getParam() {
-    System.out.println("Digite um número: ");
-    Scanner sc = new Scanner(System.in);		
-    String input = sc.next();
-
-    return input;
+  private int leValor() {
+	int input = 0;
+	  
+	try {
+      System.out.println("Digite um número: ");
+      Scanner sc = new Scanner(System.in);		
+      input = sc.nextInt();
+      sc.close();
+		
+	} catch(InputMismatchException e1) {
+      System.out.println("ERRO: Valores não númericos não são aceitos como parâmetro.");
+    }
+	
+	return input;
   }
 
   public int soma() {
-    try {
-      int num = Integer.parseInt(this.getParam());  
+    
+      int num = this.leValor();  
       this.memoria = this.memoria + num;
       System.out.println("Memória = " + this.memoria);    
       
-    } catch(NumberFormatException e1) {
-      System.out.println("ERRO: Valores não númericos não são aceitos como parâmetro.");
-    }
-
     return this.memoria;
   }
 
   public int subtrai() {
-    try {
-      int num = Integer.parseInt(this.getParam());  
+      int num = this.leValor();  
       this.memoria = this.memoria - num;
-      System.out.println("Memória = " + this.memoria);    
-      
-    } catch(NumberFormatException e1) {
-      System.out.println("ERRO: Valores não númericos não são aceitos como parâmetro.");
-    }
+      System.out.println("Memória = " + this.memoria);        
 
     return this.memoria;
   }
 
   public int multiplica() {
-    try {
-      int num = Integer.parseInt(this.getParam());  
+      int num = this.leValor(); 
       this.memoria = this.memoria * num;
       System.out.println("Memória = " + this.memoria);    
       
-    } catch(NumberFormatException e1) {
-      System.out.println("ERRO: Valores não númericos não são aceitos como parâmetro.");
-    }
-
-    return this.memoria;
+      return this.memoria;
   }
 
   public int divide() {
-    try {
-      int num = Integer.parseInt(this.getParam());  
+	try {  
+	  int num = this.leValor();
       this.memoria = this.memoria / num;
       System.out.println("Memória = " + this.memoria);    
       
-    } catch(NumberFormatException e1) {
-      System.out.println("ERRO: Valores não númericos não são aceitos como parâmetro.");
-    
     } catch(ArithmeticException e2) {
       System.out.println("ERRO: Não é possível realizar divisão por 0");
     }

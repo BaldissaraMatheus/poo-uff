@@ -9,7 +9,7 @@ public class exercicio1 {
 
     System.out.println("SOMA");
     calc.soma();
-    System.out.println("DIVISÃO");
-    calc.divide();
+//    System.out.println("DIVISÃO");
+//    calc.divide();
   }
 }
