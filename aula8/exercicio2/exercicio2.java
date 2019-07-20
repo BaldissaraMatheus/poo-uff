@@ -2,7 +2,7 @@ package aula8.exercicio2;
 
 import aula8.exercicio2.animal.*;
 
-public class aula8Ex2 {
+public class exercicio2 {
   public static void main(String[] args) {
     Animal animais[] = new Animal[10];
 
