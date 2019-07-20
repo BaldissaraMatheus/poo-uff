@@ -5,10 +5,9 @@ public class Veiculo {
   private String modelo;
   private int proprietarioId;
 
-  protected Veiculo(String placa, String modelo, int proprietarioId) {
+  protected Veiculo(String placa, String modelo) {
     this.placa = placa;
     this.modelo = modelo;
-    this.proprietarioId = proprietarioId;
   }
 
   public String getPlaca() {
