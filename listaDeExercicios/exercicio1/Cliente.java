@@ -2,8 +2,8 @@ package listaDeExercicios.exercicio1;
 
 public class Cliente {
   private int id;
-  private int veiculosCount;
-  private int atendimentosCount;
+  private int quantidadeVeiculos;
+  private int quantidadeAtendimentos;
   private String nome;
   private Veiculo veiculos[];
   private Atendimento atendimentos[];
@@ -13,9 +13,9 @@ public class Cliente {
     this.id = id;
     this.nome = nome;  
     this.veiculos = new Veiculo[TMAX];
-    this.veiculosCount = 0;
+    this.quantidadeVeiculos = 0;
     this.atendimentos = new Atendimento[TMAX];
-    this.atendimentosCount = 0;
+    this.quantidadeAtendimentos = 0;
   }
 
   public int getId() {
@@ -33,8 +33,8 @@ public class Cliente {
   public void cadastraVeiculo(String placa, String modelo) {
     Veiculo veiculo = new Veiculo(placa, modelo, this.id);
     
-    this.veiculos[this.veiculosCount] = veiculo;
-    this.veiculosCount++;
+    this.veiculos[this.quantidadeVeiculos] = veiculo;
+    this.quantidadeVeiculos++;
   }
   
   public Veiculo getVeiculo(String placa) {
@@ -59,14 +59,14 @@ public class Cliente {
         if (this.veiculos[i].getPlaca() == placa) {
           this.veiculos[i] = null;
   
-          for (int j=0; j<this.veiculosCount-1; j++) {
+          for (int j=0; j<this.quantidadeVeiculos-1; j++) {
             this.veiculos[j] = this.veiculos[j+1];
           }
   
           break;
         }
       }
-      this.veiculosCount--;      
+      this.quantidadeVeiculos--;      
     
     } catch (IndexOutOfBoundsException e1) {
       System.out.println("Não foi encontrado nenhum veículo com essa placa pertencente a este usuário");
@@ -74,12 +74,11 @@ public class Cliente {
   }
 
   public Atendimento cadastraAtendimento(String problema, String solucao, String placa) {
-    try {
-      Veiculo veiculo = this.getVeiculo(placa);
-      Atendimento atendimento = new Atendimento(this.atendimentosCount, this.id, this.nome, this.getVeiculo(placa), problema, solucao);
+    try {      
+      Atendimento atendimento = new Atendimento(this.quantidadeAtendimentos, this.id, this.nome, this.getVeiculo(placa), problema, solucao);
   
-      this.atendimentos[this.atendimentosCount] = atendimento;
-      this.atendimentosCount++;
+      this.atendimentos[this.quantidadeAtendimentos] = atendimento;
+      this.quantidadeAtendimentos++;
 
       return atendimento;
 
@@ -110,14 +109,14 @@ public class Cliente {
         if (this.atendimentos[i].getId() == atendimentoId) {
           this.atendimentos[i] = null;
   
-          for (int j=0; j<this.atendimentosCount-1; j++) {
+          for (int j=0; j<this.quantidadeAtendimentos-1; j++) {
             this.atendimentos[j] = this.atendimentos[j+1];
           }
   
           break;
         }
       }
-      this.atendimentosCount--;      
+      this.quantidadeAtendimentos--;      
     
     } catch (IndexOutOfBoundsException e1) {
       System.out.println("Não foi encontrado nenhum veículo com essa placa pertencente a este usuário");

@@ -9,7 +9,8 @@ public class Atendimento {
   private String problema;
   private String solucao;
 
-  protected Atendimento(int id, int clienteId, String clienteNome, Veiculo veiculo, String problema, String solucao) {
+  protected Atendimento(int id, int clienteId, String clienteNome, 
+		  Veiculo veiculo, String problema, String solucao) {
     this.id = id;
     this.clienteId = clienteId;
     this.clienteNome = clienteNome;

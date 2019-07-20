@@ -1,20 +1,20 @@
 package listaDeExercicios.exercicio3.produto;
 
 public class Dvd extends Produto {
-	  private int duracao;
+  private int duracao;
 
-	  public Dvd(int codigoDeBarras, int preco, int duracao) {
-	    super(codigoDeBarras, preco);
-	    this.duracao = duracao;
-	  }
+  public Dvd(int codigoDeBarras, String nome, int preco, int duracao) {
+    super(codigoDeBarras, nome, preco);
+    this.duracao = duracao;
+  }
 
-	  public int getDuracao() {
-	    return this.duracao;
-	  }
+  public int getDuracao() {
+    return this.duracao;
+  }
 
-	  public String toString() {
-	    return 
-	      super.toString()
-	      + ", Duração (minutos): " + this.getDuracao();
-	  }
-	}
+  public String toString() {
+    return 
+      super.toString()
+      + ", Duração (minutos): " + this.getDuracao();
+  }
+}

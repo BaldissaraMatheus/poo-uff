@@ -18,11 +18,11 @@ public class Loja {
 	    int TMAX = 5;
 	    Produto produtos[] = new Produto[TMAX];
 
-	    Livro livro1 = new Livro(0, 20, "George R. R. Martin");
-	    Livro livro2 = new Livro(1, 30, "George Orwell");
-	    Cd cd1 = new Cd(2, 50, 12);
-	    Cd cd2 = new Cd(3, 60, 10);
-	    Dvd dvd1 = new Dvd(4, 25, 45);    
+	    Livro livro1 = new Livro(0, "O Hobbit", 20, "J. R. R. Tolkien");
+	    Livro livro2 = new Livro(1, "Libertação Animal", 30, "Peter Singer");
+	    Cd cd1 = new Cd(2, "When We All Fall Asleep, Where Do We Go?", 50, 2);
+	    Cd cd2 = new Cd(3, "From Mars to Sirius", 50, 2);
+	    Dvd dvd1 = new Dvd(4, "A Chegada", 25, 45);    
 
 	    produtos[0] = livro1;
 	    produtos[1] = livro2;
@@ -32,10 +32,10 @@ public class Loja {
 
 	    for (int i=0; i<TMAX; i++) {
 	      System.out.println(produtos[i]);
-	    }
+	      }
 
-	    Dvd dvd2 = new Dvd(4, 25, 45);
-	    Dvd dvd3 = new Dvd(10, 25, 45);
+	    Dvd dvd2 = new Dvd(4, "A Pequena Miss Sunshine",  25, 45);
+	    Dvd dvd3 = new Dvd(10, "Hereditário", 25, 45);
 
 	    procuraProduto(produtos, dvd2, TMAX);
 	    procuraProduto(produtos, dvd3, TMAX);
